@@ -3,7 +3,7 @@
 		$(this).remove()
 
 		swipe.able = true
-		swipeHor.ableHr = true
+		swipeHor.ableHor = true
 	});
 })()
 
@@ -208,9 +208,12 @@ var swipe = {
 			$('body').css('overflow', 'auto')
 		}
 
-		if(i == 2 || i == 4){
+		if(i == 2 && thisPage.find('.grey').length > 0){
 			self.able = false
-			self.swipeHor.ableHr = false
+		}
+
+		if(i == 4 && thisPage.find('.grey').length > 0){
+			self.swipeHor.ableHor = false
 		}
 	}
 }
