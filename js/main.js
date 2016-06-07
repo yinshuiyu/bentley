@@ -1,3 +1,13 @@
+document.addEventListener('touchmove', function (event) {
+	if(swipe.scrollCurrent != 2){
+		event.preventDefault();
+		return true
+	}
+	if(swipeHor.scrollCurrentHor < 1 || (swipeHor.scrollCurrentHor > 0 && is_down()) ){
+		event.preventDefault();
+	}
+}, false); 
+
 (function() {
 	$('.grey').click(function(event) {
 		$(this).remove()
@@ -103,12 +113,16 @@ var swipe = {
 
 		//页面向上滑动事件绑定
 		target.swipeUp(function(){
+			// alert(222)
+			// $('.test').text((new Date()).valueOf())
 			if(self.scrolling || self.swipeHor.scrollingHor){
 				return false;
 			}
 
 			console.log('self.scrollTarget: ', self.scrollTarget)
-			self.fSwipe(self.scrollTarget)
+			setTimeout(function(){
+				self.fSwipe(self.scrollTarget)
+			}, 1)
 		})
 		target.swipeDown(function(){
 			if(self.scrolling || self.swipeHor.scrollingHor){
@@ -345,8 +359,8 @@ var swipeHor = {
 				});
 		}
 
-		$(self.scrollWrapHor).find('.swipe_horizontal')
-			.unbind('swipeUp')
+		// $(self.scrollWrapHor).find('.swipe_horizontal')
+		// 	.unbind('swipeUp')
 	},
 	beAbleHor: function(){
 		this.ableHor = true
