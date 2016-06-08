@@ -132,6 +132,10 @@ html,body{height: 100%;}
 .page{position: relative;display: none;width: 100%;height: 100%;}
 .page.show{display: block;}
 
+.loading_img{
+  position: absolute;
+  margin: 0 0 0 -99999px;}
+
 #page_load{height: 100%;display: block;z-index: 2;}
 #page_load > *{display: none;}
 #page_load > *.show{display: block;}

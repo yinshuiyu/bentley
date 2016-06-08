@@ -10,6 +10,7 @@
     <meta name="keywords" content=""> 
     <link rel="stylesheet" href="./css/common.css" media="all">
 
+	<script type="application/javascript" src="./js/zepto.js"></script>
 </head>
 
 <body class="load_body">
@@ -20,8 +21,9 @@
 		<canvas id="scratcher" class="canvasName"></canvas>
 	</div> --><!-- /.scratch -->
 
-	<div class="main show">
+	<div id="main" class="main">
 		<section id="page_1" class="page1 show swipe page page_1">
+			<img src="./img/page_1.jpg" alt="" class="loading_img" onload="$('#main').addClass('show')">
 			<img class="logo_img" src="./img/logo.png" alt="">
 			<h1>宾利添越SUV极致之旅</h1>
 			<h2>越藏地 出凡尘</h2>
@@ -177,7 +179,7 @@
 							<div class="info_item info_item_2_4">
 								<img src="./img/tab_2_4_cloud.png" alt="" class="cloud">
 								<img src="./img/tab_2_4_cloud_1.png" alt="" class="cloud">
-								<h1>神的孩子都要去羊湖，<br />最不可能错过的十大西藏美景。<span>洋湖</span></h1>
+								<h1>神的孩子都要去羊湖，<br />最不可能错过的十大西藏美景。<span>羊湖</span></h1>
 								<p>与纳木错、玛旁雍错并称西藏三大圣湖，<br />途经海拔5190米的那根拉山口，<br /><strong>是此行的最高海拔。</strong></p>
 							</div><!-- /.info_item -->
 						</div><!-- /.tabs_content_core -->
@@ -279,8 +281,6 @@
 	</div><!-- /.main -->
 </div><!-- /#page_load.page -->
 
-
-<script type="application/javascript" src="./js/zepto.js"></script>
 <script type="application/javascript" src="./js/swipe.js"></script>
 <script type="application/javascript" src="./js/fastclick.js"></script>
 <script type="application/javascript" src="./js/scratcher.js"></script>
