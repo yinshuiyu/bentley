@@ -494,20 +494,21 @@ $window.scroll(function(){
 })
 */
 
-/*
  $(window).scroll(function(){  
      var $this =$(this),  
-     viewH =$(this).height(),//可见高度  
-     contentH =$(this).get(0).scrollHeight,//内容高度  
-     scrollTop =$(this).scrollTop();//滚动高度  
-    if(contentH - viewH == scrollTop) { //到达底部100px时,加载新内容  
-    	console.log('ok')
+		 viewH =$(this).height(),//可见高度  
+		 contentH =$(this).get(0).scrollHeight,//内容高度  
+		 scrollTop =$(this).scrollTop(),//滚动高度  
+		 $target = $('.tabs_content.show .tabs_content_core')
+		 // console.log('$target.height: ', $target.height())
+		 // console.log('viewH: ', viewH)
+
+    if(viewH + scrollTop > $target.height()){
+    	$('#page_3 .down_tip').hide()
     }else{
-    	console.log('contentH - viewH: ', contentH - viewH)
-    	console.log('scrollTop: ', scrollTop)
+    	$('#page_3 .down_tip').show()
     }
  });
- */
 
 swipe.init()
 swipeHor.init()
