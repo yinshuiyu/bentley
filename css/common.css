@@ -1025,11 +1025,18 @@ button.swiper-pagination-bullet {
         padding: 0 0 10px;
         margin: 0 auto;}
         .ready_ul li{
+          line-height: 1.1rem;
           font-size: 1.0rem;
           padding: 40px 5px 0;
           border-left: 1px solid #d2d2d2;
+          /*text-align: justify;*/
+          /*text-align-last: justify;*/
+
           text-align: justify;
-          text-align-last: justify;
+          -ms-text-justify: inter-ideograph;
+          text-justify: inter-ideograph;
+          text-spacing: ideograph-alpha;
+
           background: url(../img/ready_icons_0.png) no-repeat 0 0;
           background-size: 292px 41px;}
           .ready_ul li:first-child{border-left: none;}
@@ -1127,7 +1134,7 @@ button.swiper-pagination-bullet {
   .green_h2{margin: 5px 0;}
   .subtitle{margin: 5px 0;}
   .not_suitable{padding: 10px 0 20px;}
-  .ready_ul li{font-size: 1.1rem;}
+  .ready_ul li{line-height: 1.3rem;font-size: 1.1rem;}
 }
 /*iPhone 6 Plus*/
 @media screen and (min-width: 414px) {
