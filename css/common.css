@@ -791,7 +791,7 @@ button.swiper-pagination-bullet {
       position: relative;
       box-shadow: 0 1px 3px #858585;}
       .tabs a{
-        line-height: 14px;
+        line-height: 1.4rem;
         color: #fff;
         font-size: 1.2rem;
         background: #00321e;
@@ -919,11 +919,11 @@ button.swiper-pagination-bullet {
             width: 141px;
             margin: -55px 0 0 -25px;}
         .info_item h1{
-          line-height: 24px;
+          line-height: 26px;
           font-size: 1.68rem;
           text-align: right;
           font-weight: bold;
-          padding: 0 0 15px;
+          padding: 0 0 5px;
           margin: 0 0 20px;
           background: url(../img/info_item_line.jpg) no-repeat right bottom;
           background-size: 220px 1px;}
@@ -931,7 +931,7 @@ button.swiper-pagination-bullet {
           line-height: 22px;
           font-size: 1.8rem;
           color: #00321e;
-          padding: 15px;
+          padding: 10px 15px;
           font-weight: bold;}
           .tabs_content_2 .info_item h1{background: none;}
             .tabs_content_2 .info_item h1 span{
@@ -996,7 +996,7 @@ button.swiper-pagination-bullet {
           background: url(../img/tab_3_3_bg_0.jpg) no-repeat right 0, url(../img/tab_3_3_bg_1.jpg) no-repeat right bottom;
           /*background-size: 182px 106px;*/}
         .info_item p{
-          line-height: 20px;
+          line-height: 22px;
           font-size: 1.4rem}
   .page4 .booking_top{margin-top: 40px;}
   .top_title{
@@ -1139,10 +1139,14 @@ button.swiper-pagination-bullet {
   .subtitle{margin: 5px 0;}
   .not_suitable{padding: 10px 0 20px;}
   .ready_ul li{line-height: 1.3rem;font-size: 1.1rem;}
+  .info_item p{line-height: 24px;}
+  .tabs a{line-height: 1.5rem;}
+  h1.top_h1{line-height: 30px;}
+  .info_item h1{line-height: 30px;}
 }
 /*iPhone 6 Plus*/
 @media screen and (min-width: 414px) {
-  html{font-size: 80%;}
+   10pxhtml{font-size: 80%;}
   .booking_top{width: 60px;height: 16px;}
   .page2 ul{width: 335px;}
     .page2 ul li{margin: 1% 0;}
@@ -1151,6 +1155,7 @@ button.swiper-pagination-bullet {
       .trip li > strong span{font-size: 0.9rem;}
     .trip li > span.long_text{text-indent: -13px;}
   .real_ul{width: 360px;}
+  .info_item p{line-height: 26px;}
 }
 .test{
   position: fixed;
