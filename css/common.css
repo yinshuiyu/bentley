@@ -12,7 +12,7 @@ body {
   font-family: Helvetica, 'STXihei', 'STHeiti Light', 'Microsoft yahei', sans-serif;
   line-height: 1;
   background-color: #fff;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 
 
@@ -590,7 +590,7 @@ button.swiper-pagination-bullet {
   height: 100%;
   position: absolute;
   top: 0;
-  display: none;
+  /*display: none;*/
 }
 
 .page1{
@@ -605,32 +605,34 @@ button.swiper-pagination-bullet {
     width: 52px;
     margin: 15px 0;}
   .page_1 h1{
-    font-size: 3.0rem}
+    font-size: 2.2rem}
   .page_1 h2{
     font-size: 1.6rem;
-    margin-top: 5px;}
+    margin-top: 10px;}
   .page_1 img.lotus_blossom{
     width: 22px;
     margin: 10px auto;}
   .page_1 p{
     line-height: 18px;}
   .page_1 a.booking_link{
-    height: 26px;
-    line-height: 26px;
-    font-size: 1.0rem;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.2rem;
     color: #12612f;
     border-radius: 30px;
-    padding: 0 20px;
+    padding: 0 20px 0 35px;
     margin: 20px auto 0;
     display: inline-block;
-    border: 1px solid #00561f;}
+    border: 1px solid #00561f;
+    background: url(../img/phone_green.png) no-repeat 10px center;
+    background-size: 21px 21px;}
   .down_tip{
     width: 35px;
     height: 15px;
     color: #fff;
     font-size: 1.0rem;
     text-align: center;  
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 50%;
     z-index: 100;
@@ -723,11 +725,10 @@ button.swiper-pagination-bullet {
     margin: 3% auto 0;
     text-align: left;}
     .page2 ul li{
-      height: 21px;
+      line-height: 1.6rem;
       font-size: 1.2rem;
-      line-height: 21px;
-      padding: 0 0 0 10px;
-      background: url(../img/dot.png) no-repeat 0 center;
+      padding: 3px 0 0 10px;
+      background: url(../img/dot.png) no-repeat 0 5px;
       background-size: 4px 11px;}
   .page3{}
     .grey{
@@ -742,6 +743,7 @@ button.swiper-pagination-bullet {
       z-index: 999;
       position: absolute;
       background: url(../img/grey.png) repeat 0 0;}
+      .grey.none{display: none;}
       .grey span{
         display: inline-block;
         padding-top: 100px;}
@@ -873,6 +875,7 @@ button.swiper-pagination-bullet {
               display: inline-block;
               background: url(../img/trip_icons.png) no-repeat 13px 0;
               background-size: 232px 295px;}
+            .trip li > span.long_text{text-indent: -5px;}
             .trip li > span.trip_0_1{background-position: -9999px -9999px;}
             .trip li > span.trip_0_2{background-position: -107px 0;}
 
@@ -902,7 +905,7 @@ button.swiper-pagination-bullet {
           background: url(../img/tab_1_2_bg.png) no-repeat right bottom;
           background-size: 261px 220px;}
         .info_item_1_3{
-          background: url(../img/tab_1_3_bg.png) no-repeat 0 bottom;
+          background: url(../img/tab_1_3_bg.png) no-repeat right center;
           background-size: 253px 253px;}
           .info_item img.cloud{position: absolute;}
           .info_item_1_2 img.cloud{
@@ -913,7 +916,7 @@ button.swiper-pagination-bullet {
             margin: -55px 0 0 -25px;}
         .info_item h1{
           line-height: 24px;
-          font-size: 1.8rem;
+          font-size: 1.68rem;
           text-align: right;
           font-weight: bold;
           padding: 0 0 15px;
@@ -1002,13 +1005,15 @@ button.swiper-pagination-bullet {
     position: relative;
     z-index: 2;
     box-shadow: 5px 0 10px #cdcdcd;}
-    .grey_wrap{background: #f6f6f6;}
+    .grey_wrap{
+      overflow: hidden;
+      background: #f6f6f6;}
       .green_h2{
-        padding: 10px 0;
+        padding: 0.8rem 0;
         text-align: center;}
         .green_h2 span{
-          line-height: 23px;
-          border-radius: 11px;
+          line-height: 2.4rem;
+          border-radius: 1.2rem;
           text-align: center;
           color: #fff;
           font-size: 1.4rem;
@@ -1056,7 +1061,7 @@ button.swiper-pagination-bullet {
         background: url(../img/ready_icons_2.png) no-repeat 0 0;
         background-size: 212px 39px;}
         .ready_ul_bottom li strong{
-          font-size: 1.4rem;
+          font-size: 1.3rem;
           font-weight: bold;
           display: block;
           padding: 0 0 5px;}
@@ -1112,14 +1117,28 @@ button.swiper-pagination-bullet {
 /*iPhone 6*/
 @media screen and (min-width: 375px) {
   html{font-size: 70%;}
+  .booking_top{width: 55px;height: 16px;}
+  .trip li{letter-spacing: 8px;padding: 20px 0 0;}
+    .trip li > strong{font-size: 1.4rem;letter-spacing: 0;margin-right: 5px;}
+      .trip li > strong span{padding-top: 2px;}
+    .trip li > span{letter-spacing: 0;}
   .page2 h1{line-height: 26px;}
   .page2 ul{width: 295px;}
+  .green_h2{margin: 5px 0;}
+  .subtitle{margin: 5px 0;}
+  .not_suitable{padding: 10px 0 20px;}
+  .ready_ul li{font-size: 1.1rem;}
 }
 /*iPhone 6 Plus*/
 @media screen and (min-width: 414px) {
   html{font-size: 80%;}
+  .booking_top{width: 60px;height: 16px;}
   .page2 ul{width: 335px;}
-  .trip li > strong{font-size: 1.4rem;}
+    .page2 ul li{margin: 1% 0;}
+  .trip li{letter-spacing: 20px;}
+    .trip li > strong{font-size: 1.2rem;}
+      .trip li > strong span{font-size: 0.9rem;}
+    .trip li > span.long_text{text-indent: -13px;}
   .real_ul{width: 360px;}
 }
 .test{

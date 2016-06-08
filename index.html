@@ -16,15 +16,15 @@
 <!-- <div class="test">00000</div> -->
 <div id="page_load" class="page">
 	<!-- <div id="load_loading" class="loading show"></div> --><!-- /.loading -->
-	<div id="load_scratch" class="scratch show">
+	<!-- <div id="load_scratch" class="scratch show">
 		<canvas id="scratcher" class="canvasName"></canvas>
-	</div><!-- /.scratch -->
+	</div> --><!-- /.scratch -->
 
-	<div class="main">
+	<div class="main show">
 		<section id="page_1" class="page1 show swipe page page_1">
 			<img class="logo_img" src="./img/logo.png" alt="">
-			<h1>宾临世界</h1>
-			<h2>宾利添越SUV西藏之旅</h2>
+			<h1>宾利添越SUV极致之旅</h1>
+			<h2>越藏地XXX</h2>
 			<img class="lotus_blossom" src="./img/lotus_blossom.png" alt="">
 			<p>
 				第一次，添越SUV在中国公开试驾<br />
@@ -44,19 +44,20 @@
 
 			<img src="./img/page_2.jpg" alt="" class="page2_banner">
 			<img src="./img/lotus_blossom_black.png" alt="" class="lotus_blossom_black">
-			<h1>你可能去过西藏<br />但你一定没和添越一起去过西藏</h1>
+			<h1>你可能去过西藏<br />但你一定没和宾利一起去过西藏</h1>
 
 			<ul>
 				<li>地形钮一键切换，从容面对不同险峻地形</li>
-				<li>新一代12缸发动机的澎湃动力，驰骋高原</li>
-				<li>大容量油箱，探索美、征服险，历更多未历之景</li>
-				<li>四座同样奢适，后排两座更高，最宜观景</li>
+				<li>新一代12缸发动机的澎湃动力，	尽情驰骋高原</li>
+				<li>大容量油箱，探索美征服险，历更多未历之景</li>
+				<li>前后座同样奢适，后排采用较高座椅设计，可尽揽沿途美景；</li>
 				<li>超大后备箱空间，容纳长途旅行一切所需</li>
 			</ul>
+			<a class="down_tip down_tip_black"></a>
 		</section><!-- /#page2.page -->
 
 		<section id="page_3" class="page3 swipe page">
-			<div class="grey">
+			<div id="page3_grey" class="grey">
 				<img class="guide_top" src="./img/guide_top.png" alt="">
 				<img class="guide_right" src="./img/guide_right.png" alt="">
 				<img class="guide_bottom" src="./img/guide_bottom.png" alt="">
@@ -67,10 +68,10 @@
 
 			<div class="tabs_wrap">
 				<div class="tabs display-flexbox">
-					<a class="tab_0 flexbox-children current"><span>行程<br />安排</span></a>
-					<a class="tab_1 flexbox-children"><span>互动<br />谅解</span></a>
-					<a class="tab_2 flexbox-children"><span>行程<br />新知</span></a>
-					<a class="tab_3 flexbox-children"><span>视听<br />推荐</span></a>
+					<a class="tab_0 flexbox-children current" href="javascript:swipeHor.go2pageHor(0)"><span>行程<br />安排</span></a>
+					<a class="tab_1 flexbox-children" href="javascript:swipeHor.go2pageHor(1)"><span>互动<br />亮点</span></a>
+					<a class="tab_2 flexbox-children" href="javascript:swipeHor.go2pageHor(2)"><span>行程<br />新知</span></a>
+					<a class="tab_3 flexbox-children" href="javascript:swipeHor.go2pageHor(3)"><span>视听<br />推荐</span></a>
 				</div><!-- /.tabs -->
 
 				<div class="swipe_hor_wrap">
@@ -82,7 +83,7 @@
 								<strong>第1天<span>拉萨</span></strong>
 								<span class="trip_0_0">抵达</span>
 								<span class="trip_0_1"></span>
-								<span class="trip_0_2">入住瑞吉酒店</span>
+								<span class="trip_0_2 long_text">入住瑞吉酒店</span>
 							</li>
 							<li>
 								<strong>第2天<span>吞巴</span></strong>
@@ -95,12 +96,12 @@
 								<strong>第3天<span>羊卓雍错</span></strong>
 								<span class="trip_2_0">羊湖午餐</span>
 								<span class="trip_2_1">绘制唐卡</span>
-								<span class="trip_2_2">百亿像素照片</span>
+								<span class="trip_2_2 long_text">百亿像素照片</span>
 							</li>
 							<li>
 								<strong>第4天<span>拉萨</span></strong>
 								<span class="trip_3_0">布达拉宫</span>
-								<span class="trip_3_1">香格里拉酒店</span>
+								<span class="trip_3_1 long_text">瑞吉酒店就餐</span>
 								<span class="trip_3_2">甘丹寺</span>
 								<span class="trip_3_3">越野路段</span>
 							</li>
@@ -129,7 +130,7 @@
 							<div class="info_item info_item_1_2">
 								<img src="./img/tab_1_2_cloud.png" alt="" class="cloud">
 								<h1>学用藏文字写扎西德勒</h1>
-								<p>作为海拔最高的文字，又有人称藏文是“写在世界屋脊上的文字”。<br />此行你不仅可以拜访藏文字创始人故居，还能学写藏<br />文名字、藏文祝福。</p>
+								<p>作为海拔最高的文字，又有人称藏文是“写在世界屋脊上的文字”。<br />此行你不仅可以拜访藏文字创始人故居，还能学写藏文名字、藏文祝福。</p>
 							</div><!-- /.info_item -->
 
 							<img src="./img/tab_1_3.jpg" alt="">
@@ -149,27 +150,27 @@
 							<div class="info_item info_item_2_0">
 								<img src="./img/tab_2_0_cloud.png" alt="" class="cloud">
 								<h1>“50元人民币背后的美景”<span>布达拉宫</span></h1>
-								<p>布达拉宫始建于公元7世纪，<br />据说是藏王松赞干布为远嫁西藏的唐朝文成公主而建。</p>
+								<p>始建于公元7世纪的布达拉宫，据说是藏王松赞干布为远嫁西藏的唐朝文成公主而建。后被选为第五套人民币的50元背面图案，站在药王山观景台，就能拍出与人民币背面同样角度的布达拉宫全貌。</p>
 							</div><!-- /.info_item -->
 
 							<img src="./img/tab_2_1.jpg" alt="">
 							<div class="info_item info_item_2_1">
 								<img src="./img/tab_2_1_cloud.png" alt="" class="cloud">
 								<h1>没去过大昭寺，<br />就等于没去过拉萨。<span>大昭寺</span></h1>
-								<p>民间亦有“先有大昭寺，后有拉萨城”的说法，<br />距今已有一千多年的历史，那些从四面八方而来，<br />一路磕长头的朝拜者，最后的目的地就是大昭寺。</p>
+								<p>民间亦有“先有大昭寺，后有拉萨城”的说法，距今已有一千多年的历史，那些从四面八方而来，一路磕长头的朝拜者，最后的目的地就是大昭寺。</p>
 							</div><!-- /.info_item -->
 
 							<img src="./img/tab_2_2.jpg" alt="">
 							<div class="info_item info_item_2_2">
 								<img src="./img/tab_2_2_cloud.png" alt="" class="cloud">
 								<h1>你见，或不见我，<br />我就在那里，不悲不喜。<span>玛吉阿米</span></h1>
-								<p>仓央嘉措（西藏六世达赖活佛，西藏最浪漫的诗人）据说他和玛吉阿米在这里一见钟情。</p>
+								<p>仓央嘉措（西藏六世达赖活佛，西藏最浪漫的诗人），行程中我们将安排在玛吉阿米用膳，于八廓街转角，品一杯甜茶，时间仿佛穿越回仓央嘉措与玛吉阿米一见钟情的那刻。</p>
 							</div><!-- /.info_item -->
 
 							<img src="./img/tab_2_3.jpg" alt="">
 							<div class="info_item info_item_2_3">
 								<h1>戴着面具、没有舞台，<br />被誉为藏文化的活化石。<span>藏戏</span></h1>
-								<p>作为第一批国家非物质文化遗产，<br />藏戏演出的盛会，是每年藏历六七月的雪顿节。</p>
+								<p>作为第一批国家非物质文化遗产，藏戏也被称为“藏文化的活化石”，透过几分威武、几分神秘的面具，聆听高亢雄浑的天籁之音，讲述一代又一代的传奇故事。</p>
 							</div><!-- /.info_item -->
 
 							<img src="./img/tab_2_4.jpg" alt="">
@@ -217,6 +218,7 @@
 					</div><!-- /.tabs_content_3 -->
 				</div><!-- /.swipe_hor -->
 			</div><!-- /.tabs_wrap -->
+			<a class="down_tip down_tip_black"></a>
 		</section><!-- /#page3.page -->
 
 		<section id="page_4" class="page4 swipe page">
@@ -250,11 +252,11 @@
 				<li class="ready_li_2 flexbox-children"><strong>鞋子</strong>行程无长途跋<br />涉，舒适即可</li>
 			</ul><!-- /.ready_ul -->
 
-			<a class="down_tip down_tip_black">详情</a>
+			<a class="down_tip down_tip_black"></a>
 		</section><!-- /#page4.page -->
 
 		<section id="page_5" class="page5 swipe page">
-			<div class="grey">
+			<div id="page5_grey" class="grey none">
 				<img class="grey_arrow" src="./img/grey_arrow.png" alt="">
 				<span>点击右上角<br />选择“发送给朋友”<br />与好友同行</span>
 			</div><!-- /.grey -->
@@ -269,8 +271,8 @@
 				<h3 class="also_h3">您还可以</h3>
 
 				<a target="_blank" href="tel:4008906668"><span>致电行程客服</span></a><br />
-				<a target="_blank" href="#">与好友同行</a><br />
-				<a target="_blank" href="#">了解活动详情</a><br />
+				<a target="_blank" href="javascript:grey.showGrey('#page5_grey')">与好友同行</a><br />
+				<a target="_blank" href="javascript:swipe.go2page(2)">了解活动详情</a><br />
 				<a target="_blank" href="#">了解添越</a>
 			</div><!-- ./also_can -->
 		</section><!-- /#page5.page -->

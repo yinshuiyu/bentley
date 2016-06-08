@@ -6,17 +6,53 @@ document.addEventListener('touchmove', function (event) {
 	if(swipeHor.scrollCurrentHor < 1 || (swipeHor.scrollCurrentHor > 0 && is_down()) ){
 		event.preventDefault();
 	}
-}, false); 
+}, false);
 
-(function() {
-	$('.grey').click(function(event) {
-		$(this).remove()
+$(function(){
+    FastClick.attach(document.body);
+    /*
+    //禁止橡皮筋
+	function stopScrolling( touchEvent ) { 
+		touchEvent.preventDefault(); 
+	} 
+	document.addEventListener( 'touchstart' , stopScrolling , false ); 
+	document.addEventListener( 'touchmove' , stopScrolling , false );
+	*/
+})
+
+var grey = {
+	init: function(){
+		this.bind()
+	},
+	bind: function(){
+		var self = this
+		$('.grey').click(function(event) {
+			var oThis = $(this),
+				sId = $(this).attr('id')
+
+			self.hideGrey('#'+sId)
+		});
+	},
+	showGrey: function(target){
+		$(target).removeClass('none')
+
+		swipe.able = false
+		swipeHor.ableHor = false	
+	},
+	hideGrey: function(target){
+		$(target).animate({
+			opacity: 0
+		}, function(){
+			$(target).remove()
+		})
 
 		swipe.able = true
-		swipeHor.ableHor = true
-	});
-})()
+		swipeHor.ableHor = true	
+	}
+}
+grey.init()
 
+/*
 //获取canvas要设置的宽高
 var width = parseInt($(window).width());
 // var height = width * 1194 / 750;
@@ -43,6 +79,7 @@ scratcher.on('reset', function () {
 });
 
 scratcher.on('scratchesended', scratcherChanged);
+*/
 
 var oPage = {
 	pages: $('.main'),
@@ -87,7 +124,8 @@ var oPage = {
 }
 
 $(function(){
-	oPage.init()
+	// oPage.init()
+	// oPage.show('1_1');
 });
 
 
@@ -113,29 +151,48 @@ var swipe = {
 
 		//页面向上滑动事件绑定
 		target.swipeUp(function(){
-			// alert(222)
 			// $('.test').text((new Date()).valueOf())
 			if(self.scrolling || self.swipeHor.scrollingHor){
 				return false;
 			}
 
-			console.log('self.scrollTarget: ', self.scrollTarget)
-			setTimeout(function(){
-				self.fSwipe(self.scrollTarget)
-			}, 1)
+			//最后一页不能继续滑动
+			if(self.scrollTarget == 0){
+				return false
+			}
+
+			self.fSwipe(self.scrollTarget)
 		})
 		target.swipeDown(function(){
 			if(self.scrolling || self.swipeHor.scrollingHor){
 				return false;
 			}
 
+			//第一页不能返回最后一页
 			if(self.scrollCurrent - 1 < 0){
-				self.scrollTarget = target.length - 1
+				// self.scrollTarget = target.length - 1
+				return false
 			}else{
 				self.scrollTarget = self.scrollCurrent - 1
 			}
 			self.fSwipe(self.scrollTarget, true)
 		})
+	},
+	go2page: function(i){
+		var self = this,
+			bBack = self.scrollTarget > i ? false : true
+
+		if(self.scrollCurrent == i){
+			return false
+		}
+
+		self.scrollTarget = i
+
+		if(self.scrolling || self.swipeHor.scrollingHor){
+			return false;
+		}
+
+		self.fSwipe(self.scrollTarget, bBack)
 	},
 	page: function(i){
 		return $(this.scrollWrap).find('section.page'+(i+1));
@@ -216,7 +273,14 @@ var swipe = {
 		console.log('callback: ', i)
 
 		var self = this,
-			thisPage = self.page(i)
+			thisPage = self.page(i),
+			oGrey = $('#page3_grey')
+
+		if(i == 2 && oGrey.length > 0){
+			setTimeout(function(){
+				grey.hideGrey('#page3_grey')
+			}, 2000)
+		}
 
 		if(self.swipeHor.scrollCurrentHor > 0){
 			$('body').css('overflow', 'auto')
@@ -224,10 +288,8 @@ var swipe = {
 
 		if(i == 2 && thisPage.find('.grey').length > 0){
 			self.able = false
-		}
-
-		if(i == 4 && thisPage.find('.grey').length > 0){
-			self.swipeHor.ableHor = false
+		}else if(i == 2){
+			swipeHor.go2pageHor(0)
 		}
 	}
 }
@@ -272,6 +334,22 @@ var swipeHor = {
 				}
 				self.fSwipeHor(self.scrollTargetHor, true)
 			})
+	},
+	go2pageHor: function(i){
+		var self = this,
+			bRight = self.scrollTargetHor > i ? true : false
+
+		if(self.scrollCurrentHor == i){
+			return false
+		}
+
+		self.scrollTargetHor = i
+
+		if(self.swipe.scrolling || self.scrollingHor){
+			return false;
+		}
+
+		self.fSwipeHor(self.scrollTargetHor, bRight)
 	},
 	pageHor: function(i){
 		return $(this.scrollWrapHor).find('.tabs_content_'+i);
@@ -380,6 +458,9 @@ var swipeHor = {
 		if(i > 0){
 			$('body').css('overflow', 'auto')
 		}
+
+		//所有页面横向切换后都要滚动到顶部
+		$('body').scrollTop(0)
 	}
 }
 
@@ -387,7 +468,7 @@ function is_down(){
 	var $window = $(window),
 		$document = $(document),
 		$body = $('body'),
-		$target = $('.tabs_content.show .tabs_content_core')	
+		$target = $('.tabs_content.show .tabs_content_core')
 
 	if ($body.scrollTop() + $window.height() >= $target.height() + $('.tabs_wrap').height()) {
 		return true
