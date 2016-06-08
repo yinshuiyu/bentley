@@ -34,7 +34,9 @@ var grey = {
 		});
 	},
 	showGrey: function(target){
-		$(target).removeClass('none')
+		$(target)
+			.css('opacity', 1)
+			.removeClass('none')
 
 		swipe.able = false
 		swipeHor.ableHor = false	
@@ -43,7 +45,7 @@ var grey = {
 		$(target).animate({
 			opacity: 0
 		}, function(){
-			$(target).remove()
+			$(target).addClass('none')
 		})
 
 		swipe.able = true
@@ -276,7 +278,7 @@ var swipe = {
 			thisPage = self.page(i),
 			oGrey = $('#page3_grey')
 
-		if(i == 2 && oGrey.length > 0){
+		if(i == 2 && !oGrey.hasClass('none')){
 			setTimeout(function(){
 				grey.hideGrey('#page3_grey')
 			}, 2000)
@@ -286,7 +288,7 @@ var swipe = {
 			$('body').css('overflow', 'auto')
 		}
 
-		if(i == 2 && thisPage.find('.grey').length > 0){
+		if(i == 2 && !thisPage.find('.grey').hasClass('none')){
 			self.able = false
 		}else if(i == 2){
 			swipeHor.go2pageHor(0)
