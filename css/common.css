@@ -1155,7 +1155,7 @@ button.swiper-pagination-bullet {
   h1.top_h1{line-height: 30px;}
   .info_item h1{line-height: 30px;}
   .tabs_wrapper{padding-top: 52px;}
-  .tabs a.current::after{margin-top: 51px;}
+  /*.tabs a.current::after{margin-top: 51px;}*/
 }
 /*iPhone 6 Plus*/
 @media screen and (min-width: 414px) {

@@ -472,7 +472,7 @@ function is_down(){
 		$body = $('body'),
 		$target = $('.tabs_content.show .tabs_content_core')
 
-	if ($body.scrollTop() + $window.height() >= $target.height() + $('.tabs_wrap').height()) {
+	if ($body.scrollTop() + $window.height() >= $target.height()) {
 		return true
 	} else {
 		return false
