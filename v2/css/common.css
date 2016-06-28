@@ -885,7 +885,7 @@ button.swiper-pagination-bullet {
               background: url(../img/trip_icons.png) no-repeat 13px 0;
               background-size: 232px 295px;}
             .trip li > span.long_text{text-indent: -5px;}
-            .trip li > span.trip_0_1{background-position: -107px 0;}
+            .trip li > span.trip_0_1{background: url(../img/trip_icons_2.png) no-repeat center 0;background-size: 32px 101px;}
             .trip li > span.trip_0_2{background-position: 13px -133px;}
 
             .trip li > span.trip_1_0{background-position: 13px -70px;}
@@ -893,15 +893,15 @@ button.swiper-pagination-bullet {
             .trip li > span.trip_1_2{background-position: -116px -70px;}
             .trip li > span.trip_1_3{background-position: -179px -70px;}
 
-            .trip li > span.trip_2_0{background-position: 13px -133px;}
+            .trip li > span.trip_2_0{background: url(../img/trip_icons_2.png) no-repeat center -73px;background-size: 32px 101px;}
             .trip li > span.trip_2_1{background-position: -54px -133px;}
             .trip li > span.trip_2_2{background-position: -116px -133px;}
-            .trip li > span.trip_2_3{background-position: -179px -198px;}
+            .trip li > span.trip_2_3{background-position: 13px -133px;}
 
             .trip li > span.trip_3_0{background-position: 13px -198px;}
-            .trip li > span.trip_3_1{background-position: -54px -198px;}
+            .trip li > span.trip_3_1{background-position: 13px -133px;}
             .trip li > span.trip_3_2{background-position: -116px -198px;}
-            .trip li > span.trip_3_3{background-position: -179px -198px;}
+            .trip li > span.trip_3_3{background: url(../img/trip_icons_2.png) no-repeat center 0;background-size: 32px 101px;}
     .tabs_content{background: #fff;}
       .swipe_hor_wrap .tabs_content:first-child{z-index: 2;}
       .info_item{
